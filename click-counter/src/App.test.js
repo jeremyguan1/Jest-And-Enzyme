@@ -62,3 +62,13 @@ test("clicking button increments counter", () => {
   const counterDisplay = findByTestAttr(wrapper, "counter-display");
   expect(counterDisplay.text()).toContain(counter + 1);
 });
+
+test("click button decrements counter", () => {
+  const counter = 7;
+  const wrapper = setup(null, { counter });
+  const button = findByTestAttr(wrapper, "decrement-button");
+  button.simulate("click");
+
+  const counterDisplay = findByTestAttr(wrapper, "counter-display");
+  expect(counterDisplay.text()).toContain(counter - 1);
+});
