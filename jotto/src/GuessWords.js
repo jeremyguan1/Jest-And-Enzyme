@@ -36,7 +36,7 @@ const GuessWords = props => {
 GuessWords.propTypes = {
   guessedWords: PropTypes.arrayOf(
     PropTypes.shape({
-      guessedWord: PropTypes.string.isRequired,
+      guessedWord: PropTypes.string,
       letterMatchCount: PropTypes.number.isRequired
     })
   ).isRequired
